@@ -59,7 +59,7 @@ def insert_nacionalidad( name):
     conn = sqlite3.connect(db['database'])
     conn.execute("PRAGMA foreign_keys = 1")
     c = conn.cursor()
-
+    
     c.execute("""
         INSERT INTO nacionalidad (country)
         VALUES (?);""", (name,))
